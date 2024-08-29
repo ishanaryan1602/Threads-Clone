@@ -33,19 +33,24 @@ export default function UserHeader() {
           <Flex gap={2} alignItems={"center"}>  
             <Text fontSize={"sm"}>@mark zuckerberg</Text>
             <Text
-              fontSize={"xs"}
+              fontSize={{
+                base: "xs",
+              }}
               bg={"gray.dark"}
               color={textColor}
               py={1}
               borderRadius={"full"}
               px={1.5}
             >
-              threads.next
+              threads.net
             </Text>
           </Flex>
         </Box>
         <Box>
-          <Avatar name="Mark Zuckerberg" src="/zuck-avatar.png" size={"xl"} />
+          <Avatar name="Mark Zuckerberg" src="/zuck-avatar.png" size={
+            {base: "md",
+            md : "xl",}
+          } />
         </Box>
       </Flex>
       <Text>
@@ -77,7 +82,7 @@ export default function UserHeader() {
         </Flex>
       </Flex>
       <Flex w={"full"}>
-        <Flex flex={1} borderBottom={"1.5px solid white"} justifyContent={"center"} pb={"3"} cursor={"pointer"}>
+        <Flex flex={1} borderBottom={"1.5px solid"} borderColor={"gray.light"} justifyContent={"center"} pb={"3"} cursor={"pointer"}>
             <Text fontWeight={"bold"}>Threads</Text>
         </Flex>
         <Flex flex={1} borderBottom={"1.px solid gary"} color={"gray.light"} justifyContent={"center"} pb={"3"} cursor={"pointer"}>
