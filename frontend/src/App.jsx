@@ -29,8 +29,8 @@ function App() {
           path="/update"
           element={user ? <UpdateProfilePage /> : <Navigate to="/auth" />}
         />
-        <Route path="/:usernmae" element={<UserPage />} />
-        <Route path="/:usernmae/post/:pid" element={<PostPage />} />
+        <Route path="/:username" element={<UserPage />} />
+        <Route path="/:username/post/:pid" element={<PostPage />} />
       </Routes>
       {user && <LogoutButton />}
     </Container>
