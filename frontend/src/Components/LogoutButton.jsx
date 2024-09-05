@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useSetRecoilState } from "recoil";
 import userAtom from "../atoms/userAtom";
 import useShowToast from "../hooks/useShowToast";
+import {FiLogOut} from 'react-icons/fi'
 
 function LogoutButton() {
 
@@ -40,7 +41,7 @@ function LogoutButton() {
         size={"sm"}
         onClick={handleLogout}
       >
-        Logout&nbsp;<FaArrowRight size={14} />
+         <FiLogOut color={"white"} size={15} />
       </Button>
     </div>
   );
