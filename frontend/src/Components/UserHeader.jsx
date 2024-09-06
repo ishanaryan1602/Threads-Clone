@@ -44,6 +44,7 @@ export default function UserHeader({ user }) {
 
   const handleFollowAndUnfollow = async () => {
     if(!currentUser)
+      if(updating) return;
     {
       showToast("Error", "Please Login to follow", "error");
 

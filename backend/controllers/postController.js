@@ -1,11 +1,15 @@
 import Post from "../models/postModel.js";
 import User from "../models/userModel.js";
+import { v2 as cloudinary } from "cloudinary";
 
 export const createPost = async (req, res) => {
   try {
-    const { postedBy, text, img } = req.body;
-    if (!postedBy || !text)
-      return res.status(400).json({ message: "Essential fields missing" });
+    const { postedBy, text } = req.body;
+    let { img } = req.body;
+    if (!postedBy || !text) {
+      // if (!postedBy) console.log("postedBy is required");
+      return res.status(400).json({ error: "Essential fields missing" });
+    }
     const user = await User.findById(postedBy);
     if (!user) {
       return res.status(404).json({ error: "User not found" });
@@ -19,6 +23,12 @@ export const createPost = async (req, res) => {
         .status(400)
         .json({ error: `Text must be less than ${maxLength} characters` });
     }
+
+    if (img) {
+      const uploadedResponse = await cloudinary.uploader.upload(img);
+      img = uploadedResponse.secure_url;
+    }
+
     const newPost = new Post({ postedBy, text, img });
     await newPost.save();
 

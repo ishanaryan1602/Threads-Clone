@@ -122,6 +122,7 @@ export default function LoginCard() {
                   bg: useColorModeValue("gray.700", "gray.800"),
                 }}
                 onClick={handleLogin}
+                isloading={loading}
               >
                 Login
               </Button>
