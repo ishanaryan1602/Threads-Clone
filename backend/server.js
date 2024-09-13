@@ -6,7 +6,6 @@ import userRouters from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
-// import bodyParser from "body-parser";
 
 dotenv.config();
 connectDB();
@@ -20,14 +19,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// app.use(bodyParser.json({ limit: '10mb' }));
-// app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
-
-app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
-app.use(express.urlencoded({ extended: true })); // To parse form data in the req.body
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ extended: true })); 
 app.use(cookieParser());
-// app.use(cors());
-
 
 app.use("/api/users", userRouters);
 app.use("/api/posts", postRoutes);

@@ -22,13 +22,10 @@ import useShowToast from "../hooks/useShowToast";
 
 export default function UserHeader({ user }) {
   const showToast = useShowToast();
-
   const currentUser = useRecoilValue(userAtom);
-
   const [updating,setUpdating] = useState(false);
-
   const [following, setFollowing] = useState(
-    user.followers.includes(currentUser._id)
+    user.followers.includes(currentUser?._id)
   );
 
   const textColor = useColorModeValue("white.pure", "gray.light");
@@ -65,7 +62,7 @@ export default function UserHeader({ user }) {
       if (following) {
         user.followers.pop();
       }  else {
-        user.followers.push(currentUser._id);
+        user.followers.push(currentUser?._id);
       }
       setFollowing(!following);
       console.log(data);

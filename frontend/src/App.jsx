@@ -15,7 +15,7 @@ import CreatePost from "./Components/CreatePost";
 function App() {
   const user = useRecoilValue(userAtom);
   return (
-    <Container maxW={"620px"}>
+    <Container maxW={"620px"} margin="0 auto">
       <Header />
       <Routes>
         <Route

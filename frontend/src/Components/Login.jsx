@@ -114,7 +114,6 @@ export default function LoginCard() {
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
-                loadingText="Submitting"
                 size="lg"
                 bg={useColorModeValue("gray.600", "gray.700")}
                 color={"white"}
@@ -123,6 +122,7 @@ export default function LoginCard() {
                 }}
                 onClick={handleLogin}
                 isloading={loading}
+                loadingText="Logging in..."
               >
                 Login
               </Button>
