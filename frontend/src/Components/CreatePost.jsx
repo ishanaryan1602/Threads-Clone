@@ -41,7 +41,7 @@ function CreatePost() {
   const { username } = useParams();
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useRecoilState(postsAtom);
-  console.log(user);
+  // console.log(user);
 
   const handleTextChange = (e) => {
     const inputText = e.target.value;
@@ -80,7 +80,7 @@ function CreatePost() {
       if (username === user.username) {
         setPosts([data, ...posts]);
       } else {
-        console.log("ishan");
+        console.log("error occured");
       }
       onClose();
       setPostText("");
