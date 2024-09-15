@@ -7,12 +7,14 @@ import postRoutes from "./routes/postRoutes.js";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 import messageRoutes from "./routes/messageRoutes.js"
+import path from 'path'
 
 dotenv.config();
 connectDB();
 const app = express();
 
 const PORT = process.env.PORT || 4000;
+const __dirname = path.resolve();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -30,6 +32,16 @@ app.use("/api/messages", messageRoutes);
 app.get("/test", (req, res) => {
   return res.send("Test API is working");
 });
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+	// react app
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+	});
+}
+
 
 app.listen(PORT, () =>
   console.log(`Server started at http://localhost:${PORT}`)
