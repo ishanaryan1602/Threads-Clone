@@ -128,7 +128,7 @@ import {
 } from "@chakra-ui/react";
 import Actions from "../Components/Actions";
 import { useEffect } from "react";
-import Comment from "../components/Comment";
+import Comment from "../Components/Comment";
 import useShowToast from "../hooks/useShowToast";
 import { useNavigate, useParams } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
