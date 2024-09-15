@@ -6,6 +6,7 @@ import userRouters from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
+import messageRoutes from "./routes/messageRoutes.js"
 
 dotenv.config();
 connectDB();
@@ -25,6 +26,7 @@ app.use(cookieParser());
 
 app.use("/api/users", userRouters);
 app.use("/api/posts", postRoutes);
+app.use("/api/messages", messageRoutes);
 app.get("/test", (req, res) => {
   return res.send("Test API is working");
 });
