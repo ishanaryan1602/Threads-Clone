@@ -1,8 +1,8 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Input, Skeleton, SkeletonCircle, Text, useColorModeValue } from "@chakra-ui/react";
-import Conversation from "../components/Conversation";
+import Conversation from "../Components/Conversation";
 import { GiConversation } from "react-icons/gi";
-import MessageContainer from "../components/MessageContainer";
+import MessageContainer from "../Components/MessageContainer";
 import { useEffect, useState } from "react";
 import useShowToast from "../hooks/useShowToast";
 import { useRecoilState, useRecoilValue } from "recoil";
