@@ -1,6 +1,6 @@
 # Real-State-App
 
-[Live Demo]([https://real-state-app-dy3k.onrender.com/](https://threads-clone-nqdm.onrender.com/))
+[Live Demo]([https://real-state-app-dy3k.onrender.com/](https://threads-clone-nqdm.onrender.com/])
 
 ## Table of Contents
 - [Images](#images)
