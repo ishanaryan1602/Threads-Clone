@@ -8,10 +8,15 @@
 - [Tech Stack](#technologies-used)
 
 ## Features
-- **Advanced Search Functionality:** Seamlessly integrated search with dynamic filters, enabling users to precisely tailor their property search experience.
-- **Comprehensive Profile Management:** Users can effortlessly update their profile details, including profile picture, username, and password, ensuring a personalized experience.
-- **Robust Property Listing Management:** Empower users to create, edit, and delete property listings with ease, offering complete control over their real estate offerings.
-- **Secure Google Authentication:** Integrated Google OAuth for a streamlined and secure login experience, enhancing user convenience and security.
+
+- **User Authentication & Registration:** A seamless login and registration experience allowing users to create accounts and log in securely to the platform.
+- **Post Creation & Interaction:** Users can create new posts, like posts, and reply to others' posts, fostering engaging conversations within the community.
+- **Suggested Users & Direct Follow:** Dynamic suggestions for users to follow, with a one-click follow functionality to easily expand connections.
+- **Full Conversation Threading:** Robust conversation threading that supports full interaction with posts, allowing users to reply and engage in ongoing discussions.
+- **Real-time Updates:** Real-time functionality ensures instant updates for posts, replies, and interactions, providing a smooth and responsive experience.
+- **Multi-media Sharing:** Users can share both text and images in their posts, enriching interactions with visual content.
+- **Dynamic Post Display:** Posts with no replies display a yawning emoji to reflect inactivity, while posts with replies feature avatars of the top three responders, adding a personal touch to each conversation.
+
 
 ## Technologies Used
 
