@@ -1,6 +1,6 @@
 # Threads-Clone
 
-[Live Demo]([https://threads-clone-nqdm.onrender.com/](https://threads-clone-buox.onrender.com/))
+[Live Demo]([https://threads-clone-nqdm.onrender.com/](https://threads-clone-buox.onrender.com/)
 
 ## Table of Contents
 - [Images](#images)
