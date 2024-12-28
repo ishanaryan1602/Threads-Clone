@@ -1,4 +1,4 @@
-# Real-State-App
+# Threads-Clone
 
 [Live Demo](https://threads-clone-nqdm.onrender.com/)
 
